@@ -51,7 +51,8 @@ open class FSPagerViewCell: UICollectionViewCell {
     fileprivate let selectionColor = UIColor(white: 0.2, alpha: 0.2)
     
     fileprivate weak var _selectedForegroundView: UIView?
-    fileprivate var selectedForegroundView: UIView? {
+    @objc
+    open var selectedForegroundView: UIView? {
         guard _selectedForegroundView == nil else {
             return _selectedForegroundView
         }
@@ -90,12 +91,12 @@ open class FSPagerViewCell: UICollectionViewCell {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+//        commonInit()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        commonInit()
+//        commonInit()
     }
     
     fileprivate func commonInit() {
